@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import QuotesBox from './components/QuotesBox'
 import quotes from './json/quotes.json'
 import icon1 from "./assets/icon/3d-stripy-flower-in-red-pot.png"
 import icon2 from "./assets/icon/3d-stripy-light-green-plant-in-beige-pot.png"
@@ -11,6 +10,7 @@ import icon6 from "./assets/icon/casual-life-3d-vase-with-tulips-glasses-and-pen
 import Header from './components/Header'
 import { useEffect } from 'react'
 import axios from 'axios'
+import Quotes from './components/Quotes'
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
       return Math.floor(Math.random()*iconArray.length)
     }
 
-    console.log(iconArray[randomIcon(iconArray)]);
+    
   
   // Quotes json - random
 
@@ -36,7 +36,7 @@ function App() {
 
     const [randomQuote, setRandomQuote] = useState(quotes[randomIndexQuote(quotes)])
   
-    console.log(randomQuote)
+    
   
   // Random user
   const [randomUser, setRandomUser] = useState()
@@ -51,8 +51,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header user={randomUser} />
-      <QuotesBox />
+      <Header
+        user={randomUser}
+      />
+      <Quotes
+        quote={randomQuote}
+      />
+      
     </div>
   )
 }

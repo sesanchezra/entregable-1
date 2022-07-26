@@ -1,10 +1,15 @@
 import React from 'react'
-import QuotesContent from './QuotesContent'
+import { ImQuotesRight } from "react-icons/im";
 
-const QuotesBox = () => {
+
+const QuotesBox = ({quote}) => {
     return (
         <div className="quotes-box">
-            <QuotesContent />
+            <div className="quotes-content">
+            <ImQuotesRight />
+            <h3>{quote?.quote}</h3>
+            <h6>{quote?.author}</h6>
+        </div>
         </div>
     )
 }
