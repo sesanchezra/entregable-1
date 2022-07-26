@@ -1,11 +1,21 @@
 import React from 'react'
+import { FiSearch } from "react-icons/fi";
 
 
 
-const Header = ({user}) => {
+const Header = ({ user }) => {
     return (
         <div className='Header'>
-            <img src={user.picture.medium} alt="" />
+            <div className='header-button'>
+                <button className='header-button-search'>
+                    <FiSearch />
+                </button>
+                <button className='header-button-img'>
+                    <img src={user?.picture.medium} alt="" />
+                </button>
+            </div>
+
+
         </div>
     )
 }

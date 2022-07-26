@@ -47,7 +47,7 @@ function App() {
       .catch(error => console.log(error))
   }, [])
 
-  console.log(randomUser)
+  // Link guia - https://dribbble.com/shots/15648656-Govoroon-App/attachments/7441406?mode=media
 
   return (
     <div className="App">

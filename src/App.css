@@ -1,0 +1,49 @@
+
+body{
+    margin: 0;
+}
+
+/* --------- HEADER ------------*/
+
+.Header{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+}
+
+.header-button{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 12% 8% 8% 0;
+}
+
+.header-button-img{
+    background-color: #fff;
+    border:none;
+    border-radius: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.header-button-img img{
+    height: 100%;
+    aspect-ratio: 1;
+    border-radius: 30%;
+    padding: 0;
+    margin: 0;
+}
+
+.header-button-search{
+    background-color: #fff;
+    border:none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    font-size: 25px;
+    color: #655fb1;
+}
