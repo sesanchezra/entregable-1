@@ -1,12 +1,12 @@
 import React from 'react'
 import QuotesBox from '../components/QuotesBox'
 
-const Quotes = ({quote}) => {
+const Quotes = ({ quote }) => {
   return (
     <div className='Quotes'>
-        <QuotesBox
-            quote={quote}
-        />
+      <QuotesBox
+        quote={quote}
+      />
     </div>
   )
 }

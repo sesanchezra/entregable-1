@@ -49,6 +49,8 @@ function App() {
 
   // Link guia - https://dribbble.com/shots/15648656-Govoroon-App/attachments/7441406?mode=media
 
+  // Link pattern - https://doodad.dev/pattern-generator/
+
   return (
     <div className="App">
       <Header
