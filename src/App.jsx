@@ -11,33 +11,34 @@ import Header from './components/Header'
 import { useEffect } from 'react'
 import axios from 'axios'
 import Quotes from './components/Quotes'
+import Footer from './components/Footer'
 
 
 function App() {
   const [count, setCount] = useState(0)
 
   // Random Icon for quotes
-    const iconArray = [
-      icon1,icon2,icon3,icon4,icon5,icon6
-    ]
+  const iconArray = [
+    icon1, icon2, icon3, icon4, icon5, icon6
+  ]
 
-    const randomIcon = (iconArray) =>{
-      return Math.floor(Math.random()*iconArray.length)
-    }
+  const randomIcon = (iconArray) => {
+    return Math.floor(Math.random() * iconArray.length)
+  }
 
-    
-  
+
+
   // Quotes json - random
 
-    const randomIndexQuote = (quotes) => {
-      return Math.floor(Math.random()*quotes.length)
-    }
+  const randomIndexQuote = (quotes) => {
+    return Math.floor(Math.random() * quotes.length)
+  }
 
 
-    const [randomQuote, setRandomQuote] = useState(quotes[randomIndexQuote(quotes)])
-  
-    
-  
+  const [randomQuote, setRandomQuote] = useState(quotes[randomIndexQuote(quotes)])
+
+
+
   // Random user
   const [randomUser, setRandomUser] = useState()
 
@@ -56,10 +57,20 @@ function App() {
       <Header
         user={randomUser}
       />
-      <Quotes
-        quote={randomQuote}
-      />
-      
+      <div className="tittle">
+        <h2>Quotes</h2>
+      </div>
+      <div className="quotes-box">
+        <Quotes
+          quote={randomQuote}
+        />
+        <Quotes
+          quote={randomQuote}
+        />
+      </div>
+
+      <Footer />
+
     </div>
   )
 }

@@ -5,8 +5,14 @@ import {AiOutlineBook}  from "react-icons/ai";
 const Footer = () => {
   return (
     <div className='Footer'>
-    <AiOutlineUser />
-    <AiOutlineBook />
+      <button className='footer-button-user'>
+        <AiOutlineUser />
+      </button>
+      <button className='footer-button-quotes'>
+        <AiOutlineBook />
+      </button>
+    
+    
 </div>
   )
 }
