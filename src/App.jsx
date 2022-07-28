@@ -52,6 +52,16 @@ function App() {
 
   // Link pattern - https://doodad.dev/pattern-generator/
 
+  // Estado active de visualizacion
+
+  const [quotesIsActive, setQuotesIsActive] = useState(true)
+  const [userIsActive, setUserIsActive] = useState(false)
+
+  const changeActive = () => {
+    setQuotesIsActive(!quotesIsActive)
+    setUserIsActive(!userIsActive)
+  }
+
   return (
     <div className="App">
       <Header
@@ -69,7 +79,11 @@ function App() {
         />
       </div>
 
-      <Footer />
+      <Footer
+        quotesState={quotesIsActive}
+        userState={userIsActive}
+        changeActive={changeActive}
+      />
 
     </div>
   )

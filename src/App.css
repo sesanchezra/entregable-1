@@ -128,7 +128,7 @@ body{
     
 }
 
-.footer-button-user, .footer-button-quotes{
+.footer-button-user-false, .footer-button-quotes-false{
     padding: 0;
     font-size: 25px;
     display: flex;
@@ -144,12 +144,28 @@ body{
     border-top-left-radius: 20px;
 }
 
-.footer-button-user:hover , .footer-button-quotes:hover{
+.footer-button-quotes-true, .footer-button-user-true{
+    width:50%;
+    height: 110%;
+    border: none;
+    background-color: #655fb1;
+    padding: 0;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    transform: translateY(-10%);
+}
+
+.footer-button-user-false:hover , .footer-button-quotes-false:hover{
     color:#fff;
     width: 10%;
     height: 60%;
     border-radius: 50%;
     margin: auto;
     background-color: #655fb1;
-    
+    border: none;
 }
