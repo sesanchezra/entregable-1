@@ -117,7 +117,7 @@ body{
     position: sticky;
     bottom: 0;
     width: 100%;
-    aspect-ratio: 6;
+    height: 80px;
     background-color: #dbe8ff;
     display: flex;
     justify-content: space-around;
@@ -137,9 +137,7 @@ body{
     background-color: #dbe8ff;
     border: none;
     color:#b4b8cd;
-    width: 10%;
     margin: auto;
-    height: 100%;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
 }
@@ -162,8 +160,8 @@ body{
 
 .footer-button-user-false:hover , .footer-button-quotes-false:hover{
     color:#fff;
-    width: 10%;
-    height: 60%;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin: auto;
     background-color: #655fb1;
