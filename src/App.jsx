@@ -77,6 +77,9 @@ function App() {
         <Quotes
           quote={randomQuote}
         />
+        <Quotes
+          quote={randomQuote}
+        />
       </div>
 
       <Footer
