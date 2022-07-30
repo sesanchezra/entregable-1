@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import quotes from './json/quotes.json'
+
 import icon1 from "./assets/icon/3d-stripy-flower-in-red-pot.png"
 import icon2 from "./assets/icon/3d-stripy-light-green-plant-in-beige-pot.png"
 import icon3 from "./assets/icon/casual-life-3d-monstera-plant-with-holes-in-its-leaves.png"
@@ -25,19 +25,6 @@ function App() {
   const randomIcon = (iconArray) => {
     return Math.floor(Math.random() * iconArray.length)
   }
-
-
-
-  // Quotes json - random
-
-  const randomIndexQuote = (quotes) => {
-    return Math.floor(Math.random() * quotes.length)
-  }
-
-
-  const [randomQuote, setRandomQuote] = useState(quotes[randomIndexQuote(quotes)])
-
-
 
   // Random user
   const [randomUser, setRandomUser] = useState()
@@ -71,12 +58,8 @@ function App() {
         <h2>Quotes</h2>
       </div>
       <div className="quotes-box">
-        <Quotes
-          quote={randomQuote}
-        />
-        <Quotes
-          quote={randomQuote}
-        />
+        <Quotes />
+        <Quotes />
       </div>
 
       <Footer
