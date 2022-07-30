@@ -12,6 +12,7 @@ import { useEffect } from 'react'
 import axios from 'axios'
 import Quotes from './components/Quotes'
 import Footer from './components/Footer'
+import User from './components/User'
 
 
 function App() {
@@ -57,10 +58,17 @@ function App() {
       <div className="tittle">
         <h2>Quotes</h2>
       </div>
-      <div className="quotes-box">
-        <Quotes />
-        <Quotes />
-      </div>
+      {
+        quotesIsActive ?
+          <div className="quotes-box">
+            <Quotes />
+            <Quotes />
+            <Quotes />
+          </div>
+        :
+          <User />
+      }
+
 
       <Footer
         quotesState={quotesIsActive}
