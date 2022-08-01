@@ -83,6 +83,8 @@ body{
     align-items: center;
 }
 
+
+
 /* ------- QUOTES --------- */
 
 .Quotes{
@@ -98,6 +100,12 @@ body{
     margin-bottom: 20px;
 }
 
+.quotes-content{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
 .quotes-content .icon-quotes{
     color:#4b5288;
     font-size: 40px;
@@ -105,16 +113,25 @@ body{
 .quotes-content h3{
     margin: 0;
     color: #4b5288;
+    font-size: 25px;
 }
 .quotes-content h6{
     margin: 0;
     color: #a4adcb;
+    font-size: 18px;
+}
+
+.quotes-content .author-button{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
 }
 
 /* ----- User -----*/
 
 .User{
-    min-height: 55vh;
+    min-height: 100vh;
 }
 
 /* ------ Footer ------*/

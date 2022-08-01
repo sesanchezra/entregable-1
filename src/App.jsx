@@ -50,6 +50,19 @@ function App() {
     setUserIsActive(!userIsActive)
   }
 
+  // Like of quote state
+
+  const [liked, setLiked] = useState()
+  const [arrayLiked, setArrayLiked] = useState([])
+
+  useEffect(() => {
+    let lastArray = arrayLiked
+    lastArray.push(liked)
+    setArrayLiked(lastArray)
+  }, [liked])
+
+  console.log(arrayLiked)
+
   return (
     <div className="App">
       <Header
@@ -61,12 +74,20 @@ function App() {
       {
         quotesIsActive ?
           <div className="quotes-box">
-            <Quotes />
-            <Quotes />
-            <Quotes />
+            <Quotes
+              setLiked={setLiked}
+            />
+            <Quotes
+              setLiked={setLiked}
+            />
+            <Quotes
+              setLiked={setLiked}
+            />
+            
           </div>
         :
-          <User />
+          <User
+          />
       }
 
 
