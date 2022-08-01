@@ -3,10 +3,14 @@ import QuotesBox from '../components/QuotesBox'
 import quotes from '../json/quotes.json'
 
 const colors = [
-  '(255,228,225)',
-  '(220,249,228)',
+  '(178, 200, 223)',
+  '(175, 122, 179)',
   '(244,204,209)',
-  '(245,220,249)'
+  '(245,220,249)',
+  '(246, 198, 234)',
+  '(148, 180, 159)',
+  '(255, 222, 180)'
+
 ]
 
 const Quotes = ({setLiked}) => {
