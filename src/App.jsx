@@ -87,6 +87,7 @@ function App() {
           </div>
         :
           <User
+            arrayLiked={arrayLiked}
           />
       }
 
