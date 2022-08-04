@@ -44,9 +44,13 @@ function App() {
 
   
   const [footerChange, setFooterChange] = useState(true)
+  const [quotesActive, setQuotesActive] = useState(true)
+  const [userActive, setUserActive] = useState(false)
 
   const changeFooter = () => {
     setFooterChange(!footerChange)
+    setUserActive(!userActive)
+    setQuotesActive(!quotesActive)
   }
 
   // Like of quote state
@@ -87,7 +91,12 @@ function App() {
         user={randomUser}
       />
       <div className="tittle">
-        <h2>Quotes</h2>
+        {
+          footerChange ?
+            <h2>Quotes</h2>
+          :
+            <h2>User</h2>
+        }
       </div>
       {
         footerChange ?
@@ -100,7 +109,8 @@ function App() {
 
 
       <Footer
-        footerChange={footerChange}
+        quotesActive={quotesActive}
+        userActive={userActive}
         changeFooter={changeFooter}
       />
 
