@@ -1,14 +1,23 @@
 import React, { useState } from 'react'
 import { ImQuotesRight } from "react-icons/im";
-import { AiOutlineHeart , AiFillHeart} from "react-icons/ai";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import quotes from '../json/quotes.json'
 
 
-const QuotesBox = ({ quote , setLiked }) => {
+const QuotesBox = ({ setLiked }) => {
+
+    // Quotes json - random
+
+    const randomIndexQuote = (quotes) => {
+        return Math.floor(Math.random() * quotes.length)
+    }
+    const [randomQuote, setRandomQuote] = useState(quotes[randomIndexQuote(quotes)])
+
 
     const [clickLike, setClickLike] = useState(false)
 
     const onLike = () => {
-        setLiked(quote)
+        setLiked(randomQuote)
         setClickLike(!clickLike)
     }
 
@@ -18,23 +27,21 @@ const QuotesBox = ({ quote , setLiked }) => {
         <div className="quotes-box">
             <div className="quotes-content">
                 <ImQuotesRight className='icon-quotes' />
-                <h3>{quote?.quote}</h3>
+                <h3>{randomQuote?.quote}</h3>
                 <div className='author-button'>
-                    <h6>{quote?.author}</h6>
+                    <h6>{randomQuote?.author}</h6>
                     <button onClick={onLike}>
                         {
                             clickLike ?
                                 <AiFillHeart />
-                            :
+                                :
                                 <AiOutlineHeart />
                         }
-                        
-                        
                     </button>
-                    
+
 
                 </div>
-                
+
             </div>
         </div>
     )

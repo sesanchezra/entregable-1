@@ -2,13 +2,13 @@ import React from 'react'
 import { AiOutlineUser } from "react-icons/ai";
 import { AiOutlineBook } from "react-icons/ai";
 
-const Footer = ({ quotesState, userState, changeActive }) => {
+const Footer = ({ footerChange,changeFooter }) => {
   return (
     <div className='Footer'>
-      <button onClick={changeActive} className={`footer-button-user-${userState}`}>
+      <button onClick={changeFooter} className={`footer-button-user-${footerChange}`}>
         <AiOutlineUser />
               </button>
-      <button onClick={changeActive} className={`footer-button-quotes-${quotesState}`}>
+      <button onClick={changeFooter} className={`footer-button-quotes-${footerChange}`}>
         <AiOutlineBook />
       </button>
     

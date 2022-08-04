@@ -42,12 +42,11 @@ function App() {
 
   // Estado active de visualizacion
 
-  const [quotesIsActive, setQuotesIsActive] = useState(true)
-  const [userIsActive, setUserIsActive] = useState(false)
+  
+  const [footerChange, setFooterChange] = useState(true)
 
-  const changeActive = () => {
-    setQuotesIsActive(!quotesIsActive)
-    setUserIsActive(!userIsActive)
+  const changeFooter = () => {
+    setFooterChange(!footerChange)
   }
 
   // Like of quote state
@@ -61,7 +60,26 @@ function App() {
     setArrayLiked(lastArray)
   }, [liked])
 
-  console.log(arrayLiked)
+  // Load of quotes random 
+
+  const [quotesLoad, setQuotesLoad] = useState()
+
+  useEffect(() => {
+    setQuotesLoad(
+      <div className="quotes-box">
+        <Quotes
+          setLiked={setLiked}
+        />
+        <Quotes
+          setLiked={setLiked}
+        />
+        <Quotes
+          setLiked={setLiked}
+        />
+
+      </div>
+    )
+  }, [])
 
   return (
     <div className="App">
@@ -72,19 +90,8 @@ function App() {
         <h2>Quotes</h2>
       </div>
       {
-        quotesIsActive ?
-          <div className="quotes-box">
-            <Quotes
-              setLiked={setLiked}
-            />
-            <Quotes
-              setLiked={setLiked}
-            />
-            <Quotes
-              setLiked={setLiked}
-            />
-            
-          </div>
+        footerChange ?
+          quotesLoad
         :
           <User
             arrayLiked={arrayLiked}
@@ -93,9 +100,8 @@ function App() {
 
 
       <Footer
-        quotesState={quotesIsActive}
-        userState={userIsActive}
-        changeActive={changeActive}
+        footerChange={footerChange}
+        changeFooter={changeFooter}
       />
 
     </div>
