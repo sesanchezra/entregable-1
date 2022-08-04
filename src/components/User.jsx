@@ -7,7 +7,7 @@ const User = ({ arrayLiked }) => {
     return (
         <div className='User'>
             {
-                arrayLiked.map((quote) => (
+                arrayLiked.filter(quote => quote?.quote !== undefined).map((quote)=>(
                     <QuoteSave
                         quote={quote}
                     />
