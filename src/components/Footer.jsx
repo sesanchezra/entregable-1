@@ -11,8 +11,6 @@ const Footer = ({ quotesActive, userActive ,changeFooter }) => {
       <button onClick={changeFooter} className={`footer-button-quotes-${quotesActive}`}>
         <AiOutlineBook />
       </button>
-    
-    
 </div >
   )
 }

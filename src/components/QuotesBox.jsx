@@ -30,12 +30,12 @@ const QuotesBox = ({ setLiked }) => {
                 <h3>{randomQuote?.quote}</h3>
                 <div className='author-button'>
                     <h6>{randomQuote?.author}</h6>
-                    <button onClick={onLike}>
+                    <button onClick={onLike} className='button-quotes-like'>
                         {
                             clickLike ?
-                                <AiFillHeart />
+                                <AiFillHeart className='unliked'/>
                                 :
-                                <AiOutlineHeart />
+                                <AiOutlineHeart className='liked'/>
                         }
                     </button>
 
