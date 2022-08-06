@@ -91,6 +91,7 @@ function App() {
     <div className="App">
       <Header
         user={randomUser}
+        changeFooter={changeFooter}
       />
       <div className="tittle">
         {
