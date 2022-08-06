@@ -151,7 +151,6 @@ body{
 /* ----- User -----*/
 
 .User{
-    min-height: 100vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -168,37 +167,39 @@ body{
 }
 
 .user-information{
-    width: 85vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #fff;
+    width: 80%;
+    margin-bottom: 5%;
     padding: 10px;
     box-sizing: border-box;
-    margin-bottom: 30px;
-    border-radius: 40px;
-    margin-left: auto;
-    margin-right: auto;
-    color:#655fb1;
 }
 
 .user-information .user-information-header{
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content:center;
     gap: 20px;
 }
 
-.user-information .user-information-header img{
-    width: 100px;
-    aspect-ratio: 1;
-    border-radius: 30px;
+.user-information .user-information-header h3{
+    margin: -10px;
+}
+.user-information .user-information-header h4{
+    margin: 0px;
+    font-size:small;
 }
 
-.user-information .user-information-header h3,h4{
-    margin: 15px;
+.user-information .user-information-header img{
+    width: 120px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.detail{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #655fb1;
 }
 
 .user-quotes{
@@ -207,6 +208,12 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.user-quotes h2{
+    position: relative;
+    left: -20%;
 }
 
 .quotes-save{

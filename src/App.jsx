@@ -97,7 +97,7 @@ function App() {
           footerChange ?
             <h2>Quotes</h2>
           :
-            <h2>User</h2>
+            <h2>Profile</h2>
         }
       </div>
       {
