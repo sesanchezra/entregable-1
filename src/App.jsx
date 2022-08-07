@@ -13,6 +13,7 @@ import axios from 'axios'
 import Quotes from './components/Quotes'
 import Footer from './components/Footer'
 import User from './components/User'
+import Search from './components/Search'
 
 
 function App() {
@@ -93,6 +94,7 @@ function App() {
         user={randomUser}
         changeFooter={changeFooter}
       />
+      <Search />
       <div className="tittle">
         {
           footerChange ?
