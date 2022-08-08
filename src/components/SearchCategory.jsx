@@ -2,12 +2,12 @@ import React from 'react'
 import { GiReceiveMoney } from 'react-icons/gi'
 
 
-const SearchCategory = ({prueba}) => {
+const SearchCategory = ({icon}) => {
     return (
         <div className='search-category'>
-            <button>
-                <GiReceiveMoney className='icon' />
-                <h4>Abundance</h4>
+            <button className='button-icon'>
+                {icon?.icon}
+                <h4 className='button-tittle'>{icon?.tittle}</h4>
             </button>
         </div>
     )

@@ -23,7 +23,7 @@ body{
 
 .Header{
     width: 100%;
-    height: 15vh;
+    height: 150px;
     display: flex;
     justify-content: flex-end;
     /* border: 1px solid black; */
@@ -251,6 +251,7 @@ body{
     box-sizing: border-box;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+    z-index: 3;
     
 }
 
@@ -297,27 +298,38 @@ body{
 
 .search{
     width: 100vw;
+    height: calc(100vh - 80px - 150px);
     aspect-ratio: 1;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items:space-evenly ;
-    gap: 20px;
+    align-items: center;
     position: absolute;
     z-index: 2;
     left: auto;
-    top: 20vh;
+    top: 150px;
+    background-color: #fff;
+}
+
+.search-box{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 80%;
+    width: 80%;
+    margin: auto;
+    align-items: center;
+    
 }
 
 .search-category{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 
 
 .search-category button{
-    width: 200px;
+    width: 150px;
     aspect-ratio: 1;
     display: flex;
     flex-direction: column;
@@ -327,15 +339,16 @@ body{
     background-color:rgb(238, 228, 255);
     border-radius: 50px;
     border: none;
+    
 }
 
 .search-category button:hover{
     background-color:#ae97cf;
 }
-.search-category .icon{
+.search-category .button-icon{
     font-size: 50px;
 }
-.search-category h4{
+.search-category .button-tittle{
     margin: 0;
     font-size: 20px;
 }
