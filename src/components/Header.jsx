@@ -3,11 +3,11 @@ import { FiSearch } from "react-icons/fi";
 
 
 
-const Header = ({ user, changeFooter ,activeSearch}) => {
+const Header = ({ user, changeFooter ,handleSearch}) => {
     return (
         <div className='Header'>
             <div className='header-button'>
-                <button className='header-button-search' onClick={activeSearch}>
+                <button className='header-button-search' onClick={handleSearch}>
                     <FiSearch />
                 </button>
                 <button className='header-button-img' onClick={changeFooter}>

@@ -365,3 +365,15 @@ body{
     margin: 0;
     font-size: 15px;
 }
+
+.close-search{
+    background-color: #fff;
+    border: none;
+    font-size: 35px;
+    width: 20%;
+    position: relative;
+    left: 0;
+    top: 0;
+    z-index:4;
+    color:#4b5288;
+}

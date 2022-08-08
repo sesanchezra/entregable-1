@@ -92,7 +92,7 @@ function App() {
 
   const [searchActive, setSearchActive] = useState(false)
 
-  const activeSearch = () => {
+  const handleSearch = () => {
     setSearchActive(!searchActive)
   }
 
@@ -101,11 +101,13 @@ function App() {
       <Header
         user={randomUser}
         changeFooter={changeFooter}
-        activeSearch={activeSearch}
+        handleSearch={handleSearch}
       />
       {
         searchActive ?
-          <Search />
+          <Search
+            handleSearch={handleSearch}
+          />
         :
         <>
           <div className="tittle">
