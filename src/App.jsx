@@ -45,7 +45,7 @@ function App() {
 
   // Estado active de visualizacion
 
-  
+
   const [footerChange, setFooterChange] = useState(true)
   const [quotesActive, setQuotesActive] = useState(true)
   const [userActive, setUserActive] = useState(false)
@@ -88,30 +88,47 @@ function App() {
     )
   }, [])
 
+  //Control de boton de busqueda
+
+  const [searchActive, setSearchActive] = useState(false)
+
+  const activeSearch = () => {
+    setSearchActive(!searchActive)
+  }
+
   return (
     <div className="App">
       <Header
         user={randomUser}
         changeFooter={changeFooter}
+        activeSearch={activeSearch}
       />
-      <Search />
-      <div className="tittle">
-        {
-          footerChange ?
-            <h2>Quotes</h2>
-          :
-            <h2>Profile</h2>
-        }
-      </div>
       {
-        footerChange ?
-          quotesLoad
+        searchActive ?
+          <Search />
         :
-          <User
-            arrayLiked={arrayLiked}
-            user={randomUser}
-          />
+        <>
+          <div className="tittle">
+            {
+              footerChange ?
+                <h2>Quotes</h2>
+                :
+                <h2>Profile</h2>
+            }
+          </div>
+            {
+              footerChange ?
+                quotesLoad
+              :
+              <User
+                arrayLiked={arrayLiked}
+                user={randomUser}
+              />
+            }
+        </>
       }
+
+
 
 
       <Footer
