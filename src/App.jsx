@@ -96,6 +96,11 @@ function App() {
     setSearchActive(!searchActive)
   }
 
+  const showQuotesSearch = () =>{
+    setFooterChange(true)
+    setSearchActive(!searchActive)
+  }
+
   return (
     <div className="App">
       <Header
@@ -107,6 +112,7 @@ function App() {
         searchActive ?
           <Search
             handleSearch={handleSearch}
+            showQuotesSearch={showQuotesSearch}
           />
         :
         <>

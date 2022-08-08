@@ -38,7 +38,7 @@ const icon = [
 
 ]
 
-const Search = ({ handleSearch }) => {
+const Search = ({ handleSearch , showQuotesSearch}) => {
     return (
         <div className='search'>
 
@@ -53,6 +53,7 @@ const Search = ({ handleSearch }) => {
                     icon.map(icon => (
                         <SearchCategory
                             icon={icon}
+                            showQuotesSearch={showQuotesSearch}
                         />
                     ))
                 }
